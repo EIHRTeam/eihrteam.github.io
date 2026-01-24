@@ -27,8 +27,8 @@ const Footer: React.FC<FooterProps> = ({ content, navLabels, scrollToSection }) 
 
         {/* Navigation Column */}
         <div>
-          <h4 className="font-bold mb-6 text-brand font-mono uppercase tracking-wider text-sm">{content.nav}</h4>
-          <ul className="space-y-3 text-sm text-gray-400 font-mono">
+          <h4 className="font-bold mb-6 text-brand font-sans uppercase tracking-wider text-sm">{content.nav}</h4>
+          <ul className="space-y-3 text-sm text-gray-400 font-sans">
             <li><button onClick={() => scrollToSection('home')} className="hover:text-white transition-colors">{navLabels.home}</button></li>
             <li><button onClick={() => scrollToSection('projects')} className="hover:text-white transition-colors">{navLabels.projects}</button></li>
             <li><button onClick={() => scrollToSection('blog')} className="hover:text-white transition-colors">{navLabels.blog}</button></li>
@@ -38,8 +38,8 @@ const Footer: React.FC<FooterProps> = ({ content, navLabels, scrollToSection }) 
 
         {/* Quick Links Column */}
         <div>
-          <h4 className="font-bold mb-6 text-brand font-mono uppercase tracking-wider text-sm">{content.quickLinks}</h4>
-          <ul className="space-y-3 text-sm text-gray-400 font-mono">
+          <h4 className="font-bold mb-6 text-brand font-sans uppercase tracking-wider text-sm">{content.quickLinks}</h4>
+          <ul className="space-y-3 text-sm text-gray-400 font-sans">
             {content.quickLinksItems.map((link, i) => (
               <li key={i}>
                 <a href={link.url} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
@@ -52,8 +52,8 @@ const Footer: React.FC<FooterProps> = ({ content, navLabels, scrollToSection }) 
 
         {/* Friendly Links Column */}
         <div>
-          <h4 className="font-bold mb-6 text-brand font-mono uppercase tracking-wider text-sm">{content.friendLinks}</h4>
-          <ul className="space-y-3 text-sm text-gray-400 font-mono">
+          <h4 className="font-bold mb-6 text-brand font-sans uppercase tracking-wider text-sm">{content.friendLinks}</h4>
+          <ul className="space-y-3 text-sm text-gray-400 font-sans">
             {content.friendLinksItems.map((link, i) => (
               <li key={i}>
                 <a href={link.url} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
