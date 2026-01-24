@@ -35,6 +35,8 @@ export interface ContentData {
   blog: {
     title: string;
     readMore: string;
+    viewAll: string;
+    blogLink: string;
     posts: {
       id: number;
       date: string;
