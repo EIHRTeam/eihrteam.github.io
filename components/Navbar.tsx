@@ -38,7 +38,7 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang, content, scrollToSection
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="px-4 py-2 hover:bg-black hover:text-brand transition-colors font-mono uppercase text-sm font-bold whitespace-nowrap"
+                className="px-4 py-2 hover:bg-black hover:text-brand transition-colors font-sans uppercase text-sm font-bold whitespace-nowrap"
               >
                 {item.label}
               </button>
@@ -54,7 +54,7 @@ const Navbar: React.FC<NavbarProps> = ({ lang, setLang, content, scrollToSection
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="font-mono text-xs font-bold hover:text-brand bg-black text-white px-3 py-1.5 whitespace-nowrap flex-shrink-0"
+                className="font-sans text-xs font-bold hover:text-brand bg-black text-white px-3 py-1.5 whitespace-nowrap flex-shrink-0"
               >
                 {item.label}
               </button>
