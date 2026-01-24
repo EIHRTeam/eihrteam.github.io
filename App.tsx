@@ -64,16 +64,30 @@ const AppLayout = () => {
         />
         <ContourBackground />
 
-        <Navbar 
-          lang={lang} 
-          setLang={setLang} 
-          content={t.nav} 
-          scrollToSection={handleNavigation} 
-        />
-
         <Routes>
-            <Route path="/" element={<Home content={t} scrollToSection={scrollToSection} />} />
-            <Route path="/blog" element={<BlogList content={t.blog} />} />
+            <Route 
+              path="/" 
+              element={
+                <Home 
+                  content={t} 
+                  lang={lang}
+                  setLang={setLang}
+                  scrollToSection={scrollToSection} 
+                />
+              } 
+            />
+            <Route 
+              path="/blog" 
+              element={
+                <BlogList 
+                  content={t.blog} 
+                  navContent={t.nav}
+                  lang={lang}
+                  setLang={setLang}
+                  scrollToSection={handleNavigation} 
+                />
+              } 
+            />
         </Routes>
 
         <Footer 

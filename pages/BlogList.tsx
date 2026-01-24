@@ -1,13 +1,18 @@
 import React from 'react';
+import Navbar from '../components/Navbar';
 import Section from '../components/Section';
 import GlitchElement from '../components/GlitchElement';
-import { ContentData } from '../types';
+import { ContentData, Language } from '../types';
 
 interface BlogListProps {
   content: ContentData['blog'];
+  navContent: ContentData['nav'];
+  lang: Language;
+  setLang: (lang: Language) => void;
+  scrollToSection: (id: string) => void;
 }
 
-const BlogList: React.FC<BlogListProps> = ({ content }) => {
+const BlogList: React.FC<BlogListProps> = ({ content, navContent, lang, setLang, scrollToSection }) => {
   // Simulating more posts by duplicating for demonstration
   const allPosts = [...content.posts, ...content.posts, ...content.posts].map((post, i) => ({
     ...post,
@@ -15,7 +20,14 @@ const BlogList: React.FC<BlogListProps> = ({ content }) => {
   }));
 
   return (
-    <div className="pt-32 pb-20 min-h-screen bg-white text-black">
+    <div className="min-h-screen bg-white text-black">
+      <Navbar 
+        lang={lang} 
+        setLang={setLang} 
+        content={navContent} 
+        scrollToSection={scrollToSection} 
+      />
+      <div className="pt-12 pb-20">
       <Section id="blog-list">
         <GlitchElement>
           <div className="mb-16 border-b border-black pb-8">
