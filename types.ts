@@ -1,0 +1,64 @@
+export type Language = 'zh' | 'en';
+
+export interface ContentData {
+  nav: {
+    home: string;
+    projects: string;
+    projects_short: string;
+    blog: string;
+    blog_short: string;
+    contact: string;
+    logo_full: string;
+    logo_short: string;
+  };
+  hero: {
+    title1: string;
+    title2: string;
+    subtitle: string;
+    cta: string;
+    stat1_label: string;
+    stat2_label: string;
+  };
+  about: {
+    title: string;
+    description: string;
+  };
+  projects: {
+    title: string;
+    items: {
+      id: number;
+      title: string;
+      category: string;
+      desc: string;
+    }[];
+  };
+  blog: {
+    title: string;
+    readMore: string;
+    posts: {
+      id: number;
+      date: string;
+      title: string;
+      excerpt: string;
+    }[];
+  };
+  contact: {
+    title: string;
+    socials: string;
+    email: string;
+  };
+  footer: {
+    nav: string;
+    quickLinks: string;
+    quickLinksItems: {
+      label: string;
+      url: string;
+    }[];
+    friendLinks: string;
+    friendLinksItems: {
+      label: string;
+      url: string;
+    }[];
+    copyright: string;
+  }
+}
