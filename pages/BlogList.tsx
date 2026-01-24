@@ -61,6 +61,7 @@ const BlogList: React.FC<BlogListProps> = ({ content, navContent, lang, setLang,
           ))}
         </div>
       </Section>
+      </div>
     </div>
   );
 };
