@@ -21,7 +21,7 @@ export const zh: ContentData = {
   },
   about: {
     title: "// 关于我们",
-    description: "成立于2020年，致力于为玩家提供最准确、最硬核的游戏数据分析与通关策略。我们相信数据不仅是冰冷的数字，更是通往胜利的钥匙。",
+    description: "成立于2025年，致力于为玩家提供最准确、最硬核的游戏数据分析与通关策略。我们相信数据不仅是冰冷的数字，更是通往胜利的钥匙。",
   },
   projects: {
     title: "项目与资源",
@@ -35,8 +35,8 @@ export const zh: ContentData = {
     title: "最新情报",
     readMore: "阅读全文",
     posts: [
-      { id: 1, date: "2023.10.24", title: "V4.5 版本前瞻与机制解析", excerpt: "新版本不仅带来了新角色，底层的韧性机制也发生了根本性变化..." },
-      { id: 2, date: "2023.10.15", title: "深渊第12层满星通关指南", excerpt: "针对本期深渊的高压环境，我们推荐以下三套阵容..." },
+      { id: 1, date: "2025.12.24", title: "V4.5 版本前瞻与机制解析", excerpt: "新版本不仅带来了新角色，底层的韧性机制也发生了根本性变化..." },
+      { id: 2, date: "2026.01.26", title: "深渊第12层满星通关指南", excerpt: "针对本期深渊的高压环境，我们推荐以下三套阵容..." },
     ],
   },
   contact: {
@@ -54,9 +54,9 @@ export const zh: ContentData = {
     ],
     friendLinks: "友情链接",
     friendLinksItems: [
-      { label: "明日方舟官网", url: "https://ak.hypergryph.com/" },
+      { label: "明日方舟：终末地 官网", url: "https://endfield.hypergryph.com/" },
       { label: "PRTS Wiki", url: "http://prts.wiki/" },
-      { label: "GamePress", url: "https://gamepress.gg/arknights/" },
+      { label: "森空岛 Wiki", url: "https://wiki.skland.com/endfield" },
     ],
     copyright: "© 2024 Endfield Industry Human Resource Team. All Rights Reserved.",
   }

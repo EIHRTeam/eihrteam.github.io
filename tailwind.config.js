@@ -14,7 +14,7 @@ export default {
         subtle: '#F0F0F0'
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['"HarmonyOS Sans SC"', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
       },
       animation: {
