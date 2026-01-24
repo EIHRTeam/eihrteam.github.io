@@ -1,8 +1,8 @@
-# EIHRTeam Landing Page
+# Endfield Industry Human Resource Team Landing Page
 
 ## Project Overview
 
-This project is the official landing page for EIHRTeam, a specialized team focusing on game strategy analysis and data mining. The application is designed as a responsive Single Page Application (SPA) utilizing modern web technologies to deliver a high-performance, visually distinct user experience characterized by a "Glitch" aesthetic. It includes bilingual support for Chinese and English.
+This project is the official landing page for Endfield Industry Human Resource Team (EIHR Team), a specialized organization focusing on strategic resource management and data-driven optimization. The application is designed as a responsive Single Page Application (SPA) utilizing modern web technologies to deliver a high-performance, visually distinct user experience characterized by a "Glitch" aesthetic. It includes bilingual support for Chinese and English.
 
 ## Technical Architecture
 
@@ -78,4 +78,4 @@ Project configuration is managed via `vite.config.ts`. Path aliases are configur
 
 ## License
 
-Proprietary software. All rights reserved by EIHRTeam.
+Proprietary software. All rights reserved by Endfield Industry Human Resource Team.

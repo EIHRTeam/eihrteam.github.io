@@ -1,7 +1,7 @@
-# Project Context: GlitchTactics Landing Page
+# Project Context: EIHR Team Landing Page
 
 ## Overview
-This project is a high-performance, visually stylized landing page for "STRATEGY_GROUP", a game strategy and data mining team. It features a distinct Cyberpunk/Glitch aesthetic and is built with modern React 19 standards. The application is designed as a Single Page Application (SPA) with smooth scrolling and bilingual support (Chinese/English).
+This project is a high-performance, visually stylized landing page for "Endfield Industry Human Resource Team / 终末地工业人事部", an organization focusing on strategic resource management and data-driven analysis. It features a distinct Cyberpunk/Glitch aesthetic and is built with modern React 19 standards. The application is designed as a Single Page Application (SPA) with smooth scrolling and bilingual support (Chinese/English).
 
 ## Tech Stack
 - **Core Framework:** React 19

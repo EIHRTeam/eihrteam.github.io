@@ -8,8 +8,8 @@ export const en: ContentData = {
     blog: "BLOG",
     blog_short: "BLOG",
     contact: "CONTACT",
-    logo_full: "STRATEGY_GRP",
-    logo_short: "S_GRP",
+    logo_full: "EIHR Team",
+    logo_short: "EIHR",
   },
   hero: {
     title1: "ULTIMATE",
@@ -58,6 +58,6 @@ export const en: ContentData = {
       { label: "PRTS Wiki", url: "http://prts.wiki/" },
       { label: "GamePress", url: "https://gamepress.gg/arknights/" },
     ],
-    copyright: "© 2024 STRATEGY_GROUP. All Rights Reserved.",
+    copyright: "© 2024 Endfield Industry Human Resource Team. All Rights Reserved.",
   }
 };

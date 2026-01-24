@@ -8,8 +8,8 @@ export const zh: ContentData = {
     blog: "博客",
     blog_short: "博客",
     contact: "联系",
-    logo_full: "STRATEGY_GRP",
-    logo_short: "S_GRP",
+    logo_full: "终末地工业人事部",
+    logo_short: "终末地人事部",
   },
   hero: {
     title1: "极致攻略",
@@ -58,6 +58,6 @@ export const zh: ContentData = {
       { label: "PRTS Wiki", url: "http://prts.wiki/" },
       { label: "GamePress", url: "https://gamepress.gg/arknights/" },
     ],
-    copyright: "© 2024 STRATEGY_GROUP. All Rights Reserved.",
+    copyright: "© 2024 Endfield Industry Human Resource Team. All Rights Reserved.",
   }
 };
