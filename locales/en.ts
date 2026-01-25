@@ -14,21 +14,21 @@ export const en: ContentData = {
   hero: {
     title1: "ULTIMATE",
     title2: "STRATEGY",
-    subtitle: "We are a specialized team dedicated to hardcore raid analysis and game data mining.",
-    cta: "JOIN US",
-    stat1_label: "Deep Guides",
-    stat2_label: "Contributors",
+    subtitle: "We are?",
+    cta: "FOLLOW US",
+    stat1_label: "Deep Guides (Fake)",
+    stat2_label: "Contributors (Also Fake)",
   },
   about: {
     title: "// ABOUT US",
-    description: "Founded in 2020, providing players with the most accurate and hardcore game data analysis. We believe data is the key to victory.",
+    description: "Founded in 2025, forgot the middle, forgot the rest.",
   },
   projects: {
     title: "PROJECTS & RESOURCES",
     items: [
-      { id: 1, title: "Dmg Calculator Pro", category: "TOOL", desc: "Real-time damage estimation based on the latest formulas." },
-      { id: 2, title: "Raid Database", category: "WIKI", desc: "Over 500+ monster mechanics and drop data, updated daily." },
-      { id: 3, title: "Build Simulator", category: "Web App", desc: "Visualize gear setups and share your builds instantly." },
+      { id: 1, title: "Medal Database", category: "TOOL", desc: "Comprehensive Endfield Medal Database." },
+      { id: 2, title: "Stay Tuned", category: "Coming S∞n™", desc: "Hold on, let me panic first." },
+      { id: 3, title: "Stay Tuned", category: "Coming S∞n™", desc: "Click to add text." },
     ],
   },
   blog: {
@@ -37,8 +37,8 @@ export const en: ContentData = {
     viewAll: "VIEW ALL LOGS",
     blogLink: "/blog",
     posts: [
-      { id: 1, date: "2023.10.24", title: "V4.5 Update Mechanics Analysis", excerpt: "The new version brings not only new characters but also fundamental poise changes..." },
-      { id: 2, date: "2023.10.15", title: "Abyss Floor 12 Full Star Guide", excerpt: "For the current high-pressure environment, we recommend these three teams..." },
+      { id: 1, date: "2025.12.24", title: "Click to add text", excerpt: "↑↓↑↓←→←→BABA" },
+      { id: 2, date: "2026.01.26", title: "Click to add text", excerpt: "↑↑↑↓↓" },
     ],
   },
   contact: {
@@ -48,7 +48,7 @@ export const en: ContentData = {
     socialLinks: {
       bilibili: "https://space.bilibili.com/3546983822264909",
       xiaohongshu: "",
-      skland: "https://wiki.skland.com/endfield/",
+      skland: "https://www.skland.com/profile?id=7932577420418",
       github: "https://github.com/EIHRTeam"
     }
   },
@@ -62,9 +62,9 @@ export const en: ContentData = {
     ],
     friendLinks: "FRIENDLY LINKS",
     friendLinksItems: [
-      { label: "Arknights Official", url: "https://ak.hypergryph.com/" },
+      { label: "Endfield Official", url: "https://endfield.hypergryph.com/en" },
       { label: "PRTS Wiki", url: "http://prts.wiki/" },
-      { label: "GamePress", url: "https://gamepress.gg/arknights/" },
+      { label: "Skland Wiki", url: "https://wiki.skland.com/endfield" },
     ],
     copyright: "© 2024 Endfield Industry Human Resource Team. All Rights Reserved.",
   }
