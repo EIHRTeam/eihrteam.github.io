@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import BlogList from './pages/BlogList';
+import BlogPost from './pages/BlogPost';
 import { TRANSLATIONS } from './i18n';
 import { Language } from './types';
 
@@ -42,8 +43,9 @@ const AppLayout = () => {
 
   // Handle cross-page scrolling and top scroll
   useEffect(() => {
-    if (location.pathname === '/' && location.state && (location.state as any).targetId) {
-      const targetId = (location.state as any).targetId;
+    const state = location.state as { targetId?: string } | null;
+    if (location.pathname === '/' && state?.targetId) {
+      const targetId = state.targetId;
       // Small timeout to ensure DOM is ready
       setTimeout(() => {
         scrollToSection(targetId);
@@ -80,6 +82,18 @@ const AppLayout = () => {
               path="/blog" 
               element={
                 <BlogList 
+                  content={t.blog} 
+                  navContent={t.nav}
+                  lang={lang}
+                  setLang={setLang}
+                  scrollToSection={handleNavigation} 
+                />
+              } 
+            />
+            <Route 
+              path="/blog/:id" 
+              element={
+                <BlogPost 
                   content={t.blog} 
                   navContent={t.nav}
                   lang={lang}

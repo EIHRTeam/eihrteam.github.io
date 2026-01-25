@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Section from '../components/Section';
 import GlitchElement from '../components/GlitchElement';
@@ -13,12 +14,6 @@ interface BlogListProps {
 }
 
 const BlogList: React.FC<BlogListProps> = ({ content, navContent, lang, setLang, scrollToSection }) => {
-  // Simulating more posts by duplicating for demonstration
-  const allPosts = [...content.posts, ...content.posts, ...content.posts].map((post, i) => ({
-    ...post,
-    id: i + 1
-  }));
-
   return (
     <div className="min-h-screen bg-white text-black">
       <Navbar 
@@ -38,9 +33,9 @@ const BlogList: React.FC<BlogListProps> = ({ content, navContent, lang, setLang,
         </GlitchElement>
 
         <div className="grid gap-6">
-          {allPosts.map((post, idx) => (
+          {content.posts.map((post, idx) => (
              <GlitchElement key={post.id} delay={idx * 0.05}>
-                <div className="group relative bg-white border border-black p-6 md:p-8 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 hover:-translate-y-1">
+                <Link to={`/blog/${post.id}`} className="block group relative bg-white border border-black p-6 md:p-8 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 hover:-translate-y-1">
                    <div className="flex flex-col md:flex-row justify-between md:items-start gap-6">
                       <div className="flex-grow">
                          <div className="font-mono text-sm text-gray-500 mb-2 flex items-center gap-2">
@@ -56,7 +51,7 @@ const BlogList: React.FC<BlogListProps> = ({ content, navContent, lang, setLang,
                         </span>
                       </div>
                    </div>
-                </div>
+                </Link>
              </GlitchElement>
           ))}
         </div>

@@ -20,7 +20,7 @@ const Contact: React.FC<ContactProps> = ({ content }) => {
           <GlitchElement>
             <h2 className="text-5xl font-bold mb-8">{content.title}</h2>
             <p className="text-gray-400 max-w-sm mb-8">
-              Whether you want to join the team or just say hi, we are always open for new connections.
+              {content.description}
             </p>
             <a href={`mailto:${content.email}`} className="inline-flex items-center gap-2 text-brand font-mono hover:underline text-lg">
               <Mail size={20} /> {content.email}

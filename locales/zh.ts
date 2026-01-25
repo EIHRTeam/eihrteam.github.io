@@ -37,12 +37,59 @@ export const zh: ContentData = {
     viewAll: "查看更多情报",
     blogLink: "/blog",
     posts: [
-      { id: 1, date: "2025.12.24", title: "点击输入文本", excerpt: "↑↓↑↓←→←→BABA" },
-      { id: 2, date: "2026.01.26", title: "点击输入文本", excerpt: "↑↑↑↓↓" },
+      { 
+        id: 1, 
+        date: "2025.12.24", 
+        title: "点击输入文本", 
+        excerpt: "↑↓↑↓←→←→BABA",
+        content: `
+# 隐藏指令已激活
+
+> 系统提示：检测到未授权的访问请求... 正在建立连接...
+
+这里是**终末地工业人事部**的内部终端。如果你看到了这条信息，说明你已经成功绕过了防火墙。
+
+## 什么是 Konami Code?
+
+Konami Code (科乐美秘技) 是一个在许多科乐美游戏中出现的作弊代码，最著名的是在《魂斗罗》中。
+
+\`\`\`javascript
+const secret = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+\`\`\`
+
+### 我们的任务
+
+1.  收集数据
+2.  分析机制
+3.  **制定策略**
+
+_保持关注，更多情报即将解锁。_
+        `
+      },
+      { 
+        id: 2, 
+        date: "2026.01.26", 
+        title: "点击输入文本", 
+        excerpt: "↑↑↑↓↓",
+        content: `
+# 另一个测试日志
+
+这是一篇测试文章，用于验证 markdown 渲染是否正常工作。
+
+- 列表项 1
+- 列表项 2
+- 列表项 3
+
+**加粗文本** 和 *斜体文本*。
+
+[这是一个链接](#)
+        `
+      },
     ],
   },
   contact: {
     title: "建立连接",
+    description: "无论你是想加入我们，还是只想打个招呼，我们随时欢迎新的连接。",
     socials: "社交媒体",
     email: "staff@eihrteam.org",
     socialLinks: {  
@@ -66,6 +113,6 @@ export const zh: ContentData = {
       { label: "PRTS Wiki", url: "http://prts.wiki/" },
       { label: "森空岛 Wiki", url: "https://wiki.skland.com/endfield" },
     ],
-    copyright: "© 2024 Endfield Industry Human Resource Team. All Rights Reserved.",
+    copyright: "© 2025 Endfield Industry Human Resource Team. All Rights Reserved.",
   }
 };

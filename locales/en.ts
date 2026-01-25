@@ -37,12 +37,59 @@ export const en: ContentData = {
     viewAll: "VIEW ALL LOGS",
     blogLink: "/blog",
     posts: [
-      { id: 1, date: "2025.12.24", title: "Click to add text", excerpt: "↑↓↑↓←→←→BABA" },
-      { id: 2, date: "2026.01.26", title: "Click to add text", excerpt: "↑↑↑↓↓" },
+      { 
+        id: 1, 
+        date: "2025.12.24", 
+        title: "Click to add text", 
+        excerpt: "↑↓↑↓←→←→BABA",
+        content: `
+# Hidden Command Activated
+
+> SYSTEM ALERT: Unauthorized access request detected... Establishing connection...
+
+This is the internal terminal of the **EIHR Team**. If you are reading this, you have successfully bypassed the firewall.
+
+## What is the Konami Code?
+
+The Konami Code is a cheat code that appears in many Konami video games, most notably in Contra.
+
+\`\`\`javascript
+const secret = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+\`\`\`
+
+### Our Mission
+
+1.  Collect Data
+2.  Analyze Mechanics
+3.  **Formulate Strategy**
+
+_Stay tuned, more intel unlocking soon._
+        `
+      },
+      { 
+        id: 2, 
+        date: "2026.01.26", 
+        title: "Click to add text", 
+        excerpt: "↑↑↑↓↓",
+        content: `
+# Another Test Log
+
+This is a test article to verify if markdown rendering is working correctly.
+
+- Item 1
+- Item 2
+- Item 3
+
+**Bold text** and *Italic text*.
+
+[This is a link](#)
+        `
+      },
     ],
   },
   contact: {
     title: "CONNECT",
+    description: "Whether you want to join the team or just say hi, we are always open for new connections.",
     socials: "Social Media",
     email: "staff@eihrteam.org",
     socialLinks: {
@@ -66,6 +113,6 @@ export const en: ContentData = {
       { label: "PRTS Wiki", url: "http://prts.wiki/" },
       { label: "Skland Wiki", url: "https://wiki.skland.com/endfield" },
     ],
-    copyright: "© 2024 Endfield Industry Human Resource Team. All Rights Reserved.",
+    copyright: "© 2025 Endfield Industry Human Resource Team. All Rights Reserved.",
   }
 };

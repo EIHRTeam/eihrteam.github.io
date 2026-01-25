@@ -43,10 +43,12 @@ export interface ContentData {
       date: string;
       title: string;
       excerpt: string;
+      content?: string; // Markdown content
     }[];
   };
   contact: {
     title: string;
+    description: string;
     socials: string;
     email: string;
     socialLinks: {

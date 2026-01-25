@@ -15,12 +15,13 @@ const About: React.FC<AboutProps> = ({ content }) => {
         <div className="flex gap-12">
            {/* Vertical Color Bar - Repeating to show full pattern */}
            <div 
-             className="hidden md:block w-4 flex-shrink-0 mt-2"
+             className="hidden md:block w-4 flex-shrink-0 -mt-1"
              style={{ 
                backgroundImage: `url(${colorBar})`,
                backgroundRepeat: 'no-repeat',
                backgroundSize: 'contain',
-               backgroundPosition: 'top center'
+               backgroundPosition: 'top center',
+               height: '72px'
              }}
            />
            
