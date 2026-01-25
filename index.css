@@ -2,22 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'HarmonyOS Sans SC';
-  src: url('https://assets.hcaor.org/fonts/hmos/HarmonyOS_Sans_SC_Thin.woff2') format('woff2');
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'HarmonyOS Sans SC';
-  src: url('https://assets.hcaor.org/fonts/hmos/HarmonyOS_Sans_SC_Light.woff2') format('woff2');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
+/* 仅加载实际使用的字体权重 (400, 500, 700) 以优化性能 */
 @font-face {
   font-family: 'HarmonyOS Sans SC';
   src: url('https://assets.hcaor.org/fonts/hmos/HarmonyOS_Sans_SC_Regular.woff2') format('woff2');
@@ -38,14 +23,6 @@
   font-family: 'HarmonyOS Sans SC';
   src: url('https://assets.hcaor.org/fonts/hmos/HarmonyOS_Sans_SC_Bold.woff2') format('woff2');
   font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'HarmonyOS Sans SC';
-  src: url('https://assets.hcaor.org/fonts/hmos/HarmonyOS_Sans_SC_Black.woff2') format('woff2');
-  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }

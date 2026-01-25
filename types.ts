@@ -51,13 +51,15 @@ export interface ContentData {
     readMore: string;
     viewAll: string;
     blogLink: string;
-    posts: {
-      id: number;
-      date: string;
-      title: string;
-      excerpt: string;
-      content?: string; // Markdown content
-    }[];
+    // i18n strings for blog pages
+    loadError: string;
+    loadPostError: string;
+    noPosts: string;
+    retry: string;
+    loading: string;
+    notFoundTitle: string;
+    notFoundDesc: string;
+    returnToArchive: string;
   };
   contact: {
     title: string;

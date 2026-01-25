@@ -6,6 +6,9 @@ import GlitchElement from '../components/GlitchElement';
 import { ContentData, Language, ApiPost } from '../types';
 import { fetchPosts } from '../services/blog';
 
+// 默认页面标题
+const DEFAULT_TITLE = 'EIHR Team // 终末地工业人事部';
+
 interface BlogListProps {
   content: ContentData['blog'];
   navContent: ContentData['nav'];
@@ -19,6 +22,14 @@ const BlogList: React.FC<BlogListProps> = ({ content, navContent, lang, setLang,
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  // 设置页面标题
+  useEffect(() => {
+    document.title = `${content.title} | EIHR Team`;
+    return () => {
+      document.title = DEFAULT_TITLE;
+    };
+  }, [content.title]);
+
   useEffect(() => {
     const loadPosts = async () => {
       try {
@@ -28,14 +39,14 @@ const BlogList: React.FC<BlogListProps> = ({ content, navContent, lang, setLang,
         setError(null);
       } catch (err) {
         console.error('Failed to load posts:', err);
-        setError('无法加载文章列表');
+        setError(content.loadError);
       } finally {
         setLoading(false);
       }
     };
 
     loadPosts();
-  }, []);
+  }, [content.loadError]);
 
   return (
     <div className="min-h-screen bg-white text-black">
@@ -59,7 +70,7 @@ const BlogList: React.FC<BlogListProps> = ({ content, navContent, lang, setLang,
           <div className="flex items-center justify-center py-20">
             <div className="flex flex-col items-center gap-4">
               <div className="w-12 h-12 border-2 border-black border-t-transparent rounded-full animate-spin" />
-              <span className="font-mono text-sm text-gray-500">LOADING DATA...</span>
+              <span className="font-mono text-sm text-gray-500">{content.loading}</span>
             </div>
           </div>
         ) : error ? (
@@ -69,12 +80,12 @@ const BlogList: React.FC<BlogListProps> = ({ content, navContent, lang, setLang,
               onClick={() => window.location.reload()} 
               className="mt-4 px-4 py-2 border border-black hover:bg-black hover:text-white transition-colors"
             >
-              重试
+              {content.retry}
             </button>
           </div>
         ) : posts.length === 0 ? (
           <div className="text-center py-20">
-            <div className="text-gray-500 font-mono">暂无文章</div>
+            <div className="text-gray-500 font-mono">{content.noPosts}</div>
           </div>
         ) : (
           <div className="grid gap-6">

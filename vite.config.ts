@@ -21,5 +21,24 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, '.'),
     }
+  },
+  build: {
+    // 代码分割优化
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // 核心框架库
+          vendor: ['react', 'react-dom', 'react-router-dom'],
+          // 动画库
+          motion: ['framer-motion'],
+          // Markdown 渲染相关
+          markdown: ['react-markdown', 'remark-gfm', 'rehype-highlight', 'highlight.js'],
+        }
+      }
+    },
+    // 启用 CSS 代码分割
+    cssCodeSplit: true,
+    // 资源文件名哈希
+    assetsInlineLimit: 4096,
   }
 });

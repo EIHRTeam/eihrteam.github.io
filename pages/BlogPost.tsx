@@ -4,19 +4,18 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
 import GlitchElement from '../components/GlitchElement';
-import { ContentData, Language, ApiPostDetail } from '../types';
+import { ContentData, ApiPostDetail } from '../types';
 import { fetchPost } from '../services/blog';
 import { X } from 'lucide-react';
 
+// 默认页面标题
+const DEFAULT_TITLE = 'EIHR Team // 终末地工业人事部';
+
 interface BlogPostProps {
   content: ContentData['blog'];
-  navContent: ContentData['nav'];
-  lang: Language;
-  setLang: (lang: Language) => void;
-  scrollToSection: (id: string) => void;
 }
 
-const BlogPost: React.FC<BlogPostProps> = ({ content, navContent, lang, setLang, scrollToSection }) => {
+const BlogPost: React.FC<BlogPostProps> = ({ content }) => {
   const { id } = useParams<{ id: string }>();
   const [post, setPost] = useState<ApiPostDetail | null>(null);
   const [loading, setLoading] = useState(true);
@@ -36,7 +35,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ content, navContent, lang, setLang,
         if (err instanceof Error && err.message === 'Post not found') {
           setError('not_found');
         } else {
-          setError('加载文章失败');
+          setError(content.loadPostError);
         }
       } finally {
         setLoading(false);
@@ -44,14 +43,24 @@ const BlogPost: React.FC<BlogPostProps> = ({ content, navContent, lang, setLang,
     };
 
     loadPost();
-  }, [id]);
+  }, [id, content.loadPostError]);
+
+  // 动态设置页面标题
+  useEffect(() => {
+    if (post) {
+      document.title = `${post.title} | EIHR Team`;
+    }
+    return () => {
+      document.title = DEFAULT_TITLE;
+    };
+  }, [post]);
 
   if (loading) {
     return (
       <div className="min-h-screen bg-white text-black flex items-center justify-center">
         <div className="flex flex-col items-center gap-4">
           <div className="w-12 h-12 border-2 border-black border-t-transparent rounded-full animate-spin" />
-          <span className="font-mono text-sm text-gray-500">LOADING DATA...</span>
+          <span className="font-mono text-sm text-gray-500">{content.loading}</span>
         </div>
       </div>
     );
@@ -61,9 +70,9 @@ const BlogPost: React.FC<BlogPostProps> = ({ content, navContent, lang, setLang,
     return (
       <div className="min-h-screen bg-white text-black flex items-center justify-center">
         <div className="text-center">
-           <h1 className="text-4xl font-bold mb-4">404 // DATA_NOT_FOUND</h1>
-           <p className="text-gray-500 mb-8 font-mono">请求的文章不存在</p>
-           <Link to="/blog" className="text-blue-600 underline hover:text-blue-800">Return to Archive</Link>
+           <h1 className="text-4xl font-bold mb-4">{content.notFoundTitle}</h1>
+           <p className="text-gray-500 mb-8 font-mono">{content.notFoundDesc}</p>
+           <Link to="/blog" className="text-blue-600 underline hover:text-blue-800">{content.returnToArchive}</Link>
         </div>
       </div>
     );
@@ -79,7 +88,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ content, navContent, lang, setLang,
              onClick={() => window.location.reload()} 
              className="px-4 py-2 border border-black hover:bg-black hover:text-white transition-colors"
            >
-             重试
+             {content.retry}
            </button>
         </div>
       </div>

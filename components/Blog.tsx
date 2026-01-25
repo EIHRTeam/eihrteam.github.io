@@ -41,8 +41,8 @@ const Blog: React.FC<BlogProps> = ({ content }) => {
 
       <div className="space-y-4">
         {loading ? (
-          // 加载骨架屏
-          [...Array(3)].map((_, idx) => (
+          // 加载骨架屏 - 显示3个占位项
+          Array.from({ length: 3 }).map((_, idx) => (
             <GlitchElement key={idx} delay={idx * 0.1}>
               <div className="bg-white border-l-4 border-gray-200 pl-6 py-6 animate-pulse">
                 <div className="grid md:grid-cols-12 gap-4 items-center">
@@ -60,7 +60,7 @@ const Blog: React.FC<BlogProps> = ({ content }) => {
           ))
         ) : posts.length === 0 ? (
           <div className="text-center py-12 text-gray-500 font-mono">
-            暂无文章
+            {content.noPosts}
           </div>
         ) : (
           posts.map((post, idx) => (
