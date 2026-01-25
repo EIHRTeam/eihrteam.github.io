@@ -24,6 +24,7 @@ const About: React.FC<AboutProps> = ({ content }) => {
               {content.description}
             </p>
           </div>
+        </div>
       </GlitchElement>
     </Section>
   );
