@@ -1,5 +1,18 @@
 export type Language = 'zh' | 'en';
 
+// API 返回的博客文章类型
+export interface ApiPost {
+  id: string;
+  title: string;
+  date: string;
+  excerpt: string;
+  tags?: string[];
+}
+
+export interface ApiPostDetail extends ApiPost {
+  content: string;
+}
+
 export interface ContentData {
   nav: {
     home: string;

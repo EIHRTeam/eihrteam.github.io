@@ -70,3 +70,209 @@ body {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+
+/* ============================================
+   代码高亮样式 - 基于 VS Code Dark+ 主题
+   ============================================ */
+
+/* 代码块容器样式 */
+.prose pre {
+  position: relative;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+}
+
+.prose pre code {
+  background: transparent !important;
+  padding: 0 !important;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', monospace;
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+/* highlight.js 主题样式 - VS Code Dark+ */
+.hljs {
+  background: #1e1e1e !important;
+  color: #d4d4d4;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #6a9955;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-section,
+.hljs-link {
+  color: #569cd6;
+}
+
+.hljs-function .hljs-keyword {
+  color: #569cd6;
+}
+
+.hljs-string,
+.hljs-title,
+.hljs-name,
+.hljs-type,
+.hljs-attribute,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-tag,
+.hljs-template-variable {
+  color: #ce9178;
+}
+
+.hljs-title.function_,
+.hljs-title.class_ {
+  color: #dcdcaa;
+}
+
+.hljs-number {
+  color: #b5cea8;
+}
+
+.hljs-regexp {
+  color: #d16969;
+}
+
+.hljs-built_in {
+  color: #4ec9b0;
+}
+
+.hljs-class .hljs-title {
+  color: #4ec9b0;
+}
+
+.hljs-attr {
+  color: #9cdcfe;
+}
+
+.hljs-meta {
+  color: #9b9b9b;
+}
+
+.hljs-deletion {
+  color: #ce9178;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-params {
+  color: #9cdcfe;
+}
+
+.hljs-property {
+  color: #9cdcfe;
+}
+
+/* Python 特定 */
+.hljs-doctag {
+  color: #608b4e;
+}
+
+/* TypeScript/JavaScript 特定 */
+.hljs-title.class_.inherited__ {
+  color: #4ec9b0;
+}
+
+/* 任务列表样式 (GFM) */
+.prose ul.contains-task-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.prose li.task-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.prose li.task-list-item input[type="checkbox"] {
+  margin-top: 0.375rem;
+  width: 1rem;
+  height: 1rem;
+  accent-color: #1f2937;
+}
+
+/* 有序列表样式增强 */
+.prose ol {
+  counter-reset: list-counter;
+}
+
+.prose ol > li {
+  position: relative;
+  padding-left: 0.25rem;
+}
+
+.prose ol > li::marker {
+  color: #1f2937;
+  font-weight: 600;
+}
+
+/* 无序列表样式增强 */
+.prose ul > li::marker {
+  color: #1f2937;
+}
+
+/* 引用块样式增强 */
+.prose blockquote {
+  position: relative;
+  quotes: none;
+}
+
+.prose blockquote p {
+  margin: 0;
+}
+
+/* 表格悬停效果 */
+.prose tbody tr:hover {
+  background-color: rgba(251, 250, 45, 0.1);
+}
+
+/* 删除线文本样式 (GFM) */
+.prose del {
+  color: #888;
+  text-decoration: line-through;
+}
+
+/* 行内代码样式调整 */
+.prose :not(pre) > code {
+  background: #f3f4f6;
+  color: #1f2937;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', monospace;
+}
+
+/* 代码块滚动条样式 */
+.prose pre::-webkit-scrollbar {
+  height: 8px;
+}
+
+.prose pre::-webkit-scrollbar-track {
+  background: #2d2d2d;
+  border-radius: 4px;
+}
+
+.prose pre::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}
+
+.prose pre::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}

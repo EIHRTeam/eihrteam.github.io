@@ -40,8 +40,8 @@ const Footer: React.FC<FooterProps> = ({ content, navLabels, scrollToSection }) 
         <div>
           <h4 className="font-bold mb-6 text-brand font-sans uppercase tracking-wider text-sm">{content.quickLinks}</h4>
           <ul className="space-y-3 text-sm text-gray-400 font-sans">
-            {content.quickLinksItems.map((link, i) => (
-              <li key={i}>
+            {content.quickLinksItems.map((link) => (
+              <li key={`${link.label}-${link.url}`}>
                 <a href={link.url} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                   {link.label}
                 </a>
@@ -54,8 +54,8 @@ const Footer: React.FC<FooterProps> = ({ content, navLabels, scrollToSection }) 
         <div>
           <h4 className="font-bold mb-6 text-brand font-sans uppercase tracking-wider text-sm">{content.friendLinks}</h4>
           <ul className="space-y-3 text-sm text-gray-400 font-sans">
-            {content.friendLinksItems.map((link, i) => (
-              <li key={i}>
+            {content.friendLinksItems.map((link) => (
+              <li key={`${link.label}-${link.url}`}>
                 <a href={link.url} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                   {link.label}
                 </a>

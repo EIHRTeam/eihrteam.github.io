@@ -34,9 +34,9 @@ const Contact: React.FC<ContactProps> = ({ content }) => {
                 { icon: BookHeart, label: "小红书", color: "hover:bg-red-500", href: content.socialLinks.xiaohongshu },
                 { icon: SklandIcon, label: "森空岛", color: "hover:bg-cyan-500", href: content.socialLinks.skland },
                 { icon: Github, label: "GITHUB", color: "hover:bg-gray-800", href: content.socialLinks.github },
-              ].map((social, i) => (
+              ].map((social) => (
                 <a 
-                  key={i} 
+                  key={social.label} 
                   href={social.href || "#"} 
                   target={social.href ? "_blank" : undefined}
                   rel={social.href ? "noopener noreferrer" : undefined}

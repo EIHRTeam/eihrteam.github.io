@@ -58,6 +58,10 @@ const AppLayout = () => {
     }
   }, [location]);
 
+  useEffect(() => {
+    document.documentElement.lang = lang;
+  }, [lang]);
+
   return (
     <div className="min-h-screen bg-white text-black font-sans selection:bg-brand">
         <m.div
