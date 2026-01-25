@@ -12,13 +12,13 @@ const About: React.FC<AboutProps> = ({ content }) => {
   return (
     <Section id="about" className="pt-20">
       <GlitchElement>
-        <div className="flex gap-8">
+        <div className="flex gap-10">
            {/* Vertical Color Bar */}
-           <div className="hidden md:block w-2 flex-shrink-0 relative">
+           <div className="hidden md:block w-4 flex-shrink-0 relative">
              <img 
                src={colorBar} 
                alt="" 
-               className="absolute top-0 left-1/2 -translate-x-1/2 h-full min-w-[4px] w-auto max-w-none object-cover"
+               className="absolute top-0 left-1/2 -translate-x-1/2 h-full min-w-[8px] w-auto max-w-none object-cover"
              />
            </div>
            
