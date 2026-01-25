@@ -26,7 +26,7 @@ export const en: ContentData = {
   projects: {
     title: "PROJECTS & RESOURCES",
     items: [
-      { id: 1, title: "Medal Database", category: "TOOL", desc: "Comprehensive Endfield Medal Database." },
+      { id: 1, title: "Medal Database", category: "TOOL", desc: "Comprehensive Endfield Medal Database.", link: "https://medal.eihrteam.org/" },
       { id: 2, title: "Stay Tuned", category: "Coming S∞n™", desc: "Hold on, let me panic first." },
       { id: 3, title: "Stay Tuned", category: "Coming S∞n™", desc: "Click to add text." },
     ],

@@ -30,6 +30,7 @@ export interface ContentData {
       title: string;
       category: string;
       desc: string;
+      link?: string;
     }[];
   };
   blog: {

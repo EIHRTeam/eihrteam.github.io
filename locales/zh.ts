@@ -26,7 +26,7 @@ export const zh: ContentData = {
   projects: {
     title: "项目与资源",
     items: [
-      { id: 1, title: "成就数据库", category: "工具", desc: "全面的终末地蚀刻章数据库。" },
+      { id: 1, title: "成就数据库", category: "工具", desc: "全面的终末地蚀刻章数据库。", link: "https://medal.eihrteam.org/" },
       { id: 2, title: "敬请期待", category: "Coming S∞n™", desc: "别急，让我先急" },
       { id: 3, title: "敬请期待", category: "Coming S∞n™", desc: "点击输入文本" },
     ],

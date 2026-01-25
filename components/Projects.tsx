@@ -25,7 +25,13 @@ const Projects: React.FC<ProjectsProps> = ({ content }) => {
       <div className="grid md:grid-cols-3 gap-6">
         {content.items.map((item, idx) => (
           <GlitchElement key={item.id} delay={idx * 0.1}>
-            <div className="group bg-white border border-black p-6 hover:bg-black hover:text-white transition-all duration-300 h-full flex flex-col justify-between rounded-bl-2xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]">
+            <a 
+              href={item.link || "#"}
+              target={item.link ? "_blank" : undefined}
+              rel={item.link ? "noopener noreferrer" : undefined}
+              className={`group bg-white border border-black p-6 hover:bg-black hover:text-white transition-all duration-300 h-full flex flex-col justify-between rounded-bl-2xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] ${!item.link ? 'cursor-default' : 'cursor-pointer'}`}
+              onClick={(e) => !item.link && e.preventDefault()}
+            >
               <div>
                 <div className="flex justify-between items-start mb-6">
                   <span className="font-mono text-xs px-2 py-1 border border-brand text-black bg-brand">{item.category}</span>
@@ -39,7 +45,7 @@ const Projects: React.FC<ProjectsProps> = ({ content }) => {
                   <ArrowUpRight size={16} />
                 </div>
               </div>
-            </div>
+            </a>
           </GlitchElement>
         ))}
       </div>
