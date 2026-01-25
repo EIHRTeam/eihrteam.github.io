@@ -48,6 +48,12 @@ export interface ContentData {
     title: string;
     socials: string;
     email: string;
+    socialLinks: {
+      bilibili: string;
+      xiaohongshu: string;
+      skland: string;
+      github: string;
+    };
   };
   footer: {
     nav: string;

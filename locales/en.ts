@@ -45,6 +45,12 @@ export const en: ContentData = {
     title: "CONNECT",
     socials: "Social Media",
     email: "staff@eihrteam.org",
+    socialLinks: {
+      bilibili: "https://space.bilibili.com/3546983822264909",
+      xiaohongshu: "",
+      skland: "https://wiki.skland.com/endfield/",
+      github: "https://github.com/EIHRTeam"
+    }
   },
   footer: {
     nav: "NAVIGATION",

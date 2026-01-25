@@ -45,6 +45,12 @@ export const zh: ContentData = {
     title: "建立连接",
     socials: "社交媒体",
     email: "staff@eihrteam.org",
+    socialLinks: {
+      bilibili: "https://space.bilibili.com/3546983822264909",
+      xiaohongshu: "",
+      skland: "https://wiki.skland.com/endfield/",
+      github: "https://github.com/EIHRTeam"
+    }
   },
   footer: {
     nav: "网站导航",
