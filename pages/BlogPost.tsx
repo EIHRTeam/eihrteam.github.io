@@ -30,55 +30,49 @@ const BlogPost: React.FC<BlogPostProps> = ({ content, navContent, lang, setLang,
   }
 
   return (
-    <div className="min-h-screen bg-white text-black">
-      <Navbar 
-        lang={lang} 
-        setLang={setLang} 
-        content={navContent} 
-        scrollToSection={scrollToSection} 
-      />
+    <div className="min-h-screen bg-white text-black selection:bg-brand">
+      {/* Note: Navbar removed for this view to match screenshot aesthetic */}
       
-      <div className="pt-32 pb-20 max-w-5xl mx-auto px-6 md:px-12">
+      <div className="max-w-6xl mx-auto px-8 md:px-24 py-20 md:py-32">
         <GlitchElement>
-            <div className="mb-8">
-                {/* Meta Row */}
-                <div className="flex items-center gap-4 mb-6">
-                    <span className="bg-gray-200 text-gray-600 px-3 py-1 text-sm font-bold font-sans uppercase">
-                        LOGS
-                    </span>
-                    <span className="text-gray-400 font-mono text-sm">
-                        {post.date}
-                    </span>
-                </div>
-
-                {/* Title & Close Row */}
-                <div className="flex justify-between items-start gap-8">
-                    <h1 className="text-3xl md:text-5xl font-bold leading-tight max-w-3xl">
-                        {post.title}
-                    </h1>
-                    <Link 
-                      to="/blog" 
-                      className="p-2 hover:bg-gray-100 rounded-full transition-colors flex-shrink-0"
-                      aria-label="Close"
-                    >
-                        <X size={40} className="text-black" />
-                    </Link>
-                </div>
+            {/* Top Meta Row */}
+            <div className="flex items-center gap-4 mb-6">
+                <span className="bg-[#EAEAEA] text-[#666666] px-3 py-1 text-xs font-bold tracking-wider">
+                    NOTICES
+                </span>
+                <span className="text-[#999999] font-mono text-sm tracking-tight">
+                    {post.date}
+                </span>
             </div>
 
-            {/* Separator */}
-            <hr className="border-gray-300 mb-12" />
+            {/* Title & Close Row */}
+            <div className="flex justify-between items-start gap-12 mb-8">
+                <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-black font-sans leading-[1.1]">
+                    {post.title}
+                </h1>
+                <Link 
+                  to="/blog" 
+                  className="text-black hover:opacity-60 transition-opacity pt-2"
+                  aria-label="Close"
+                >
+                    <X size={48} strokeWidth={1.5} />
+                </Link>
+            </div>
 
-            <div className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:uppercase prose-a:text-brand-dark prose-blockquote:border-l-4 prose-blockquote:border-brand prose-blockquote:bg-gray-50 prose-blockquote:py-2 prose-blockquote:px-4 prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:font-mono font-sans text-gray-800">
+            {/* Subtle Divider */}
+            <div className="h-[1px] bg-[#EAEAEA] w-full mb-16" />
+
+            {/* Content Area */}
+            <article className="prose prose-lg max-w-none prose-headings:text-black prose-headings:font-bold prose-p:text-[#333333] prose-p:leading-relaxed prose-blockquote:border-brand prose-blockquote:bg-subtle/20 prose-code:bg-gray-100 font-sans">
                 <ReactMarkdown>{post.content || post.excerpt}</ReactMarkdown>
-            </div>
+            </article>
             
-            {/* Bottom Decoration */}
-            <div className="mt-20 border-t border-dashed border-gray-200 pt-8 flex justify-between items-end opacity-50">
-               <div className="w-8 h-8 border border-gray-400 flex flex-col justify-center gap-1 p-1">
-                  <div className="w-4 h-px bg-gray-400"></div>
-                  <div className="w-full h-px bg-gray-400"></div>
-                  <div className="w-3 h-px bg-gray-400"></div>
+            {/* Specific Bottom Left Decoration from screenshot */}
+            <div className="mt-32 opacity-20">
+               <div className="w-10 h-10 border border-black flex flex-col justify-center items-center gap-1.5 p-2">
+                  <div className="w-5 h-[1.5px] bg-black"></div>
+                  <div className="w-5 h-[1.5px] bg-black"></div>
+                  <div className="w-3 h-[1.5px] bg-black self-start"></div>
                </div>
             </div>
         </GlitchElement>
