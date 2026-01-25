@@ -16,7 +16,7 @@ const Hero: React.FC<HeroProps> = ({ content, scrollToSection }) => {
         <div className="lg:col-span-8 space-y-2">
           <GlitchElement>
             <div className="inline-block px-2 py-1 bg-black text-brand font-mono text-xs mb-4">
-              SYS.READY // V.0.0.1
+              SYS.READY // V.0.0.1 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
             </div>
           </GlitchElement>
 
