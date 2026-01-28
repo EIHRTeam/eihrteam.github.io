@@ -55,8 +55,8 @@ jobs:
       - name: Build
         run: pnpm build:only
         # 如果需要设置 API URL 环境变量，请取消注释下一行并修改值
-        # env:
-        #   VITE_API_URL: ${{ secrets.VITE_API_URL }}
+        env:
+          VITE_API_URL: ${{ secrets.VITE_API_URL }}
 
       # 针对 SPA 的路由修复（复制 index.html 为 404.html）
       # 这让 GitHub Pages 可以处理 React Router 的深层链接
